@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - My Top 10 Best Videos</title>
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Top 10 Best Videos</h1>
+        <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+    </header>
+
+    <main>
+        <ol class="video-list">
+            <li>
+                <a href="video1.html" class="video-card">
+                    <img src="https://img.youtube.com/vi/PuMz4v5PYKc/maxresdefault.jpg" alt="Porter Robinson - Look at the Sky (Official Lyric Video)">
+                    <div>
+                        <h2>Porter Robinson - Look at the Sky (Official Lyric Video)</h2>
+                        <p>Music video by Porter Robinson</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="video2.html" class="video-card">
+                    <img src="https://img.youtube.com/vi/QdBZY2fkU-0/maxresdefault.jpg" alt="GTA 6 Trailer 1">
+                    <div>
+                        <h2>GTA 6 Trailer 1</h2>
+                        <p>Trailer for the upcoming brand new installment in the GTA series by Rockstar Games</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="video3.html" class="video-card">
+                    <img src="https://img.youtube.com/vi/r54ERYvKzi8/maxresdefault.jpg" alt="Forts & Tiffany Aris - Still Here | Worlds 2024 Finals Opening Ceremony">
+                    <div>
+                        <h2>Forts & Tiffany Aris - Still Here | Worlds 2024 Finals Opening Ceremony</h2>
+                        <p>Live performance by Mars Atlas of Forts and Tiffany Aris</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="video4.html" class="video-card">
+                    <img src="https://img.youtube.com/vi/O4yG5NFNFeI/maxresdefault.jpg" alt="FNATIC Comms on comeback against Loud">
+                    <div>
+                        <h2>FNATIC Comms on comeback against Loud (VCT Lock/In)</h2>
+                        <p>Relive the match through the words of Boaster, Derke, Chronicle, Alfajer and Leo</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="video5.html" class="video-card">
+                    <img src="https://img.youtube.com/vi/vlRt36fKgaw/maxresdefault.jpg" alt="The Best Plays From The Grand Finals">
+                    <div>
+                        <h2>The Best Plays From The Grand Finals | Worlds 2024</h2>
+                        <p>Highlights of The Grand Finals T1 vs BLG!</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="video6.html" class="video-card">
+                    <img src="https://img.youtube.com/vi/eDqfg_LexCQ/maxresdefault.jpg" alt="Introducing iPhone 16 Pro | Apple">
+                    <div>
+                        <h2>Introducing iPhone 16 Pro | Apple</h2>
+                        <p>This is an iPhone 16 Pro trailer</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="video7.html" class="video-card">
+                    <img src="https://img.youtube.com/vi/4SZEDBFPpgw/maxresdefault.jpg" alt="Porter Robinson - Get your Wish">
+                    <div>
+                        <h2>Porter Robinson - Get your Wish (Official Music Video)</h2>
+                        <p>Get Your Wish song by Porter Robinson</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="video8.html" class="video-card">
+                    <img src="https://img.youtube.com/vi/3i1OB6wKYms/maxresdefault.jpg" alt="Introducing Galaxy S25 Ultra | Samsung">
+                    <div>
+                        <h2>Introducing Galaxy S25 Ultra | Samsung</h2>
+                        <p>The all-new Galaxy S25 Ultra</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="video9.html" class="video-card">
+                    <img src="https://img.youtube.com/vi/cctcq9eOPOg/maxresdefault.jpg" alt="2024 Toyota GR Supra Overview | Toyota">
+                    <div>
+                        <h2>2024 Toyota GR Supra Overview | Toyota</h2>
+                        <p>Brand new Supra model for 2024 by Toyota</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="video10.html" class="video-card">
+                    <img src="https://img.youtube.com/vi/SRiV0RgHWI0/maxresdefault.jpg" alt="GeForce RTX 50 Series GPUs and Laptops | Game Changer">
+                    <div>
+                        <h2>GeForce RTX 50 Series GPUs and Laptops | Game Changer</h2>
+                        <p>Announcing the GeForce RTX 50 Series powered by NVIDIA Blackwell</p>
+                    </div>
+                </a>
+            </li>
+        </ol>
+    </main>
+
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            toggleButton.textContent = '☀️';
+        }
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            toggleButton.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+        });
+    </script>
+
+</body>
+</html>

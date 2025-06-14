@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forts & Tiffany Aris - Still Here</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Forts & Tiffany Aris - Still Here</h1>
+        <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+    </header>
+
+    <main>
+        <a href="homepage.html" class="back-link">← Return to Homepage</a>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/r54ERYvKzi8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <section class="description">
+            <h2>Description</h2>
+            <p>The live performance of Still Here by Mars Atlas of Forts and Tiffany Aris during the Worlds 2024 Finals Opening Ceremony.</p>
+        </section>
+
+        <section class="rating">
+            <h2>Rating</h2>
+            <div id="star-rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            toggleButton.textContent = '☀️';
+        }
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            toggleButton.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+        });
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redge Vinzel Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<script>
+const typeText = ["Redge Vinzel", "Aspiring Web Developer"];
+let i = 0, j = 0, currentText = "", isDeleting = false;
+
+function type() {
+  currentText = typeText[i];
+  let displayedText = isDeleting ? currentText.substring(0, j--) : currentText.substring(0, j++);
+  document.querySelector('.typewriter').textContent = displayedText;
+
+  if (!isDeleting && j === currentText.length) {
+    isDeleting = true;
+    setTimeout(type, 1000);
+  } else if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % typeText.length;
+    setTimeout(type, 500);
+  } else {
+    setTimeout(type, isDeleting ? 50 : 100);
+  }
+}
+type();
+</script>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">
+        <img src="pictures dump/my profile pic.jpg" alt="Logo" class="logo"/>
+        <h1>Redge's Portfolio</h1>
+      </div>
+      <ul class="nav-right">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+  <div class="hero-content">
+    <img src="pictures dump/my profile pic.jpg" alt="Profile" class="profile-img"/>
+    <h1><span class="typewriter"></span></h1>
+    <p>Aspiring Web Developer</p>
+    <p>Studying BSIT-MWA at National University Mall of Asia.</p>
+    <button>Get in touch</button>
+    </div>
+    </section>
+
+
+    <section id="skills" class="skills-section">
+      <h2>My Skills</h2>
+      <div class="skills-container">
+        <div class="skill-box">HTML and CSS</div>
+        <div class="skill-box">Java Language</div>
+        <div class="skill-box">Basic JavaScript</div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+  <h2>My Projects</h2>
+  <section id="projects" class="projects-section">
+  <div class="projects-container">
+
+    <div class="project-card">
+      <img src="project1.png" alt="Top Ten Videos Project" />
+      <h3>Top Ten Videos Project</h3>
+      <p>A minimal, responsive website built with HTML, CSS.</p>
+      <button onclick="window.location.href='MA3_DelaCruz/homepage.html'">Click to View</button>
+    </div>
+
+    <div class="project-card">
+      <img src="project2.png" alt="Simple Inventory System" />
+      <h3>Simple Inventory System</h3>
+      <p>A simple web app for tracking baked products using Python (Flask) and Tailwind CSS.</p>
+      <button onclick="window.location.href='DelaCruz_FA2/registration.html'">Click to View</button>
+    </div>
+
+    <div class="project-card">
+      <img src="project3.png" alt="Personal Habit Tracker" />
+      <h3>Personal Habit Tracker</h3>
+      <p>A web app that tracks daily good and bad habits using a simple interface.</p>
+      <button onclick="window.location.href='MA5_DelaCruz/profile.html'">Click to View</button>
+    </div>
+
+  </div>
+</section>
+
+
+    <section id="contact" class="contact-section">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out!!</p>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

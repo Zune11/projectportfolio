@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .card {
+    background-color: white;
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .profile-img {
+    border-radius: 80%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .title {
+    color: purple;
+    font-size: 18px;
+  }
+  
+  a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: white;
+    background-color: #ffd900;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }  

@@ -1,0 +1,125 @@
+/* Homepage Specific CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #0f0f0f;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+#darkModeToggle {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#darkModeToggle:hover {
+  transform: scale(1.2);
+}
+
+main {
+  margin-top: 30px;
+}
+
+.video-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.video-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-card div {
+  padding: 15px;
+}
+
+.video-card h2 {
+  font-size: 1.1rem;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.video-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #181818;
+  color: #fff;
+}
+
+body.dark-mode header {
+  background-color: #202020;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .video-card {
+  background-color: #212121;
+  color: #fff;
+}
+
+body.dark-mode .video-card h2 {
+  color: #fff;
+}
+
+body.dark-mode .video-card p {
+  color: #aaa;
+}
